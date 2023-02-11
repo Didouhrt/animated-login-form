@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>animated login form</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+  <h2>Login</h2>
+  <form action="">
+    <input  type="email" placeholder="Enter your Email" style="--i:#fd35dc;">
+    <input class="active" type="password" placeholder="Enter your password" style="--i:#49c3f3;">
+    <button style="--i:#fd35dc;" class="btn">Login</button>
+  </form>
+  <p>Or Connect With</p>
+  <div class="socialicons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-github"></i>
+  </div>
+</div>
+<script>
+  let inputs = document.querySelectorAll('input')
+  function active(){
+    inputs.forEach(inp=>inp.classList.remove('active'))
+    this.classList.add('active')
+  }
+  inputs.forEach(inp=>inp.addEventListener('click',active))
+</script>
+<script src="index.js"></script>
+</body>
+</html>
